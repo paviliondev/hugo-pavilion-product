@@ -1,5 +1,16 @@
-$background: #ffffff;
+// Abstract Imports
+@import 'abstracts/colors';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
-body {
-  background-color: $background;
-}
+// Base Imports
+@import 'base/normalize';
+@import 'base/typography';
+
+// Component Imports
+@import 'components/buttons';
+
+// Layout Imports
+@import 'layouts/navigation';
+
+// Page Imports
