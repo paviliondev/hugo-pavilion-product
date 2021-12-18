@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="site-logo">
+    <a href="{{ .Site.BaseURL }}">
+      <img
+        src="https://thepavilion.io/uploads/default/original/2X/e/e967d39581b01101127019b5754c72816d169f41.png"
+        alt="Pavilion logo"
+        width="200"
+        loading="lazy"
+      />
+    </a>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      {{ range where .Pages "Type" "page"}}
+      <li>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

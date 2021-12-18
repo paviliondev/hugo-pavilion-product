@@ -1,0 +1,25 @@
+.site-header {
+  display: flex;
+  padding: 1rem;
+
+  .site-logo {
+    padding: 1rem;
+  }
+
+  .site-navigation {
+    margin-left: auto;
+    align-self: center;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+
+      li a {
+        color: var(--clr-primary-300);
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}

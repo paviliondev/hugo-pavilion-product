@@ -1,0 +1,38 @@
+@mixin link($type: dark) {
+  @if $type == 'light' {
+    color: var(--clr-primary-250);
+  } @else {
+    color: var(--clr-primary-400);
+  }
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    @if $type == 'light' {
+      color: var(--clr-primary-300);
+    } @else {
+      color: var(--clr-primary-200);
+    }
+  }
+
+  &:focus {
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 0 0 0.15rem var(--clr-primary-300);
+  }
+
+  &:active {
+    @if $type == 'light' {
+      color: var(--clr-primary-300);
+    } @else {
+      color: var(--clr-primary-200);
+    }
+    box-shadow: none;
+    border-bottom: 2px solid var(--clr-primary-200);
+    border-radius: 0;
+  }
+
+  &:visited {
+    color: var(--clr-primary-500);
+  }
+}
