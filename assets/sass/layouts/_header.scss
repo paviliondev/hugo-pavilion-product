@@ -1,7 +1,7 @@
 .site-header {
   display: flex;
   padding: 1rem;
-  transition: all ease 0.3s;
+  transition: all ease 0.25s;
   background: var(--clr-gray-100);
   width: 100%;
 
@@ -26,8 +26,51 @@
       }
     }
 
-    .sub-menu {
-      display: none;
+    .menu-dropdown {
+      position: relative;
+      transition: all ease 0.25s;
+
+      &:hover {
+        // background: red;
+        .dropdown-panel {
+          display: flex;
+          transform: translateX(0%) translateY(0) scale(0.97);
+          opacity: 1;
+        }
+      }
+    }
+
+    .dropdown-panel {
+      // display: none;
+      opacity: 0;
+      transform: scale(0.1);
+      position: absolute;
+      top: 1.75rem;
+      left: -100px;
+      padding: 1.5rem;
+
+      width: 300px;
+      flex-flow: row wrap;
+      gap: 1rem 2rem;
+
+      background: #ffffff;
+      box-shadow: 0px 1px 10px -3px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      transition: all ease 0.28s;
+
+      li {
+        flex: 1 1 100%;
+
+        svg {
+          width: 20px;
+          margin-right: 1rem;
+        }
+      }
+
+      // top: 100%;
+      // left: 0;
+      // width: 100%;
+      // perspective: 1000px;
     }
   }
 }

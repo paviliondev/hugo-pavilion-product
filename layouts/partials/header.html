@@ -14,21 +14,21 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main.Sort.ByWeight}}
           {{ if .HasChildren }}
-              <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+              <li class="{{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }} menu-dropdown">
                   <a href="#" class="link">
                     <span>{{ .Name }}</span>
                   </a>
+                  <ul class="dropdown-panel">
+                      {{ range .Children }}
+                          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                              <a href="{{ .URL }}" class="link">
+                                {{ .Pre }}
+                                {{ .Name }}
+                              </a>
+                          </li>
+                      {{ end }}
+                  </ul>
               </li>
-              <ul class="sub-menu">
-                  {{ range .Children }}
-                      <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                          <a href="{{ .URL }}" class="link">
-                            {{ .Pre }}
-                            {{ .Name }}
-                          </a>
-                      </li>
-                  {{ end }}
-              </ul>
           {{ else }}
               <li>
                   <a href="{{ .URL }}" class="{{.Params.class}} link">
