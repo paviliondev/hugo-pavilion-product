@@ -1,0 +1,40 @@
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-primary-300);
+  border-radius: 3rem;
+  color: var(--clr-primary-50);
+  height: 16rem;
+  margin: 3rem 0;
+
+  &-text-content {
+    padding: 3rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      max-width: 65%;
+    }
+
+    a {
+      color: var(--clr-primary-50);
+      border-bottom: 2px solid var(--clr-primary-50);
+      transition: padding 0.25s ease;
+
+      &:hover {
+        text-decoration: none;
+        padding-bottom: 3px;
+      }
+    }
+  }
+
+  &-image-content {
+    img {
+      margin-top: 2rem;
+      max-width: 30rem;
+    }
+  }
+}
