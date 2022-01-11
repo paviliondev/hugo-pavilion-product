@@ -182,12 +182,7 @@
     margin: 0 auto;
     margin-top: 2rem;
     color: var(--clr-primary-300);
-
-    width: 100vw;
-    position: relative;
-    margin-left: -50vw;
-    left: 50%;
-    padding-bottom: 5rem;
+    @include fluid-section;
     z-index: -1;
 
     @include for-size('mobile-extra-large-down') {
