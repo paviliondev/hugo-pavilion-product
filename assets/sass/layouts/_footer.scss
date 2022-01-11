@@ -32,8 +32,12 @@ footer {
     }
 
     &-right {
-      display: flex;
+      display: none;
+      @include for-size('medium-up') {
+        display: flex;
+      }
       gap: 3rem;
+
       li h3 {
         font-size: var(--font-0);
       }

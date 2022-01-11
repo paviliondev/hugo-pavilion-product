@@ -6,6 +6,16 @@
     }
   }
 
+  // Device Sizes
+  --mobile-small: 320px,
+  --mobile-medium: 350px,
+  --mobile-large: 450px,
+  --mobile-extra-large: 550px,
+  --tablet: 768px,
+  --medium: 850px,
+  --large: 1000px,
+  --extra-large: 1140px
+
   // Fonts
   --base-font-size-smallest: 0.815em; // eq. to 13px
   --base-font-size-smaller: 0.875em; // eq. to 14px

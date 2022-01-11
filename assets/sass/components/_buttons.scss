@@ -9,3 +9,16 @@
 .btn-secondary {
   @include button('secondary');
 }
+
+.btn-outline {
+  @include button('secondary');
+  background: transparent;
+  border: 2px solid var(--clr-primary-300);
+  box-shadow: none;
+  padding: 0.35rem 1rem;
+
+  &:hover {
+    background: var(--clr-primary-300);
+    color: var(--clr-primary-50);
+  }
+}

@@ -1,3 +1,71 @@
+@mixin for-size($size) {
+  @if $size == 'mobile-small-up' {
+    @media screen and (min-width: 320px) {
+      @content;
+    }
+  } @else if $size == 'mobile-small-down' {
+    @media screen and (max-width: 320px) {
+      @content;
+    }
+  } @else if $size == 'mobile-medium-up' {
+    @media screen and (min-width: 350px) {
+      @content;
+    }
+  } @else if $size == 'mobile-medium-down' {
+    @media screen and (max-width: 350px) {
+      @content;
+    }
+  } @else if $size == 'mobile-large-up' {
+    @media screen and (min-width: 450px) {
+      @content;
+    }
+  } @else if $size == 'mobile-large-down' {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  } @else if $size == 'mobile-extra-large-up' {
+    @media screen and (min-width: 550px) {
+      @content;
+    }
+  } @else if $size == 'mobile-extra-large-down' {
+    @media screen and (max-width: 550px) {
+      @content;
+    }
+  } @else if $size == 'tablet-up' {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == 'tablet-down' {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == 'medium-up' {
+    @media screen and (min-width: 850px) {
+      @content;
+    }
+  } @else if $size == 'medium-down' {
+    @media screen and (max-width: 850px) {
+      @content;
+    }
+  } @else if $size == 'large-up' {
+    @media screen and (min-width: 1000px) {
+      @content;
+    }
+  } @else if $size == 'large-down' {
+    @media screen and (max-width: 1000px) {
+      @content;
+    }
+  } @else if $size == 'extra-large-up' {
+    @media screen and (min-width: 1140px) {
+      @content;
+    }
+  } @else if $size == 'extra-large-down' {
+    @media screen and (max-width: 1140px) {
+      @content;
+    }
+  }
+}
+
 @mixin link($type: dark) {
   @if $type == 'light' {
     color: var(--clr-primary-250);
@@ -61,6 +129,29 @@
     } @else {
       color: var(--clr-gray-100) !important;
       background: var(--clr-primary-400);
+    }
+  }
+}
+
+@mixin section-title($isCentered: 'false') {
+  h3 {
+    color: var(--clr-primary-300);
+    font-size: 2rem;
+
+    @if ($isCentered == 'true') {
+      text-align: center;
+    }
+
+    + p {
+      color: var(--clr-primary-250);
+      font-size: 1rem;
+      @include for-size('medium-up') {
+        max-width: 38%;
+      }
+      @if ($isCentered == 'true') {
+        margin: 0 auto;
+        text-align: center;
+      }
     }
   }
 }

@@ -4,16 +4,26 @@
 }
 
 main#content {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 19rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include for-size('mobile-large-up') {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @include for-size('medium-up') {
+    padding-bottom: 19rem;
+  }
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 17.5rem;
+  @include for-size('medium-up') {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 17.5rem;
+  }
 }
 
 a {

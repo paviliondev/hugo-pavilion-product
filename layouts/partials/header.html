@@ -8,6 +8,11 @@
         loading="lazy"
       />
     </a>
+    <div class="hamburger-toggle">
+      <button class='hamburger-button' onclick="toggleNavigation()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </div>
   <nav class="site-navigation">
     <ul>
@@ -51,5 +56,10 @@ window.onscroll = (() => {
   } else {
     header.classList.remove('scrolling-header');
   }
+});
+
+toggleNavigation = (() => {
+  const navigationItems = document.querySelector('.site-navigation');
+  return navigationItems.classList.toggle('expanded-navigation');
 });
 </script>
