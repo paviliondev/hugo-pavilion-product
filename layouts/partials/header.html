@@ -1,0 +1,65 @@
+<header class="site-header">
+  <div class="site-logo">
+    <a href="{{ .Site.BaseURL }}">
+      <img
+        src="https://thepavilion.io/uploads/default/original/2X/e/e967d39581b01101127019b5754c72816d169f41.png"
+        alt="Pavilion logo"
+        width="200"
+        loading="lazy"
+      />
+    </a>
+    <div class="hamburger-toggle">
+      <button class='hamburger-button' onclick="toggleNavigation()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main.Sort.ByWeight}}
+          {{ if .HasChildren }}
+              <li class="{{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }} menu-dropdown">
+                  <a href="#" class="link">
+                    <span>{{ .Name }}</span>
+                  </a>
+                  <ul class="dropdown-panel">
+                      {{ range .Children }}
+                          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                              <a href="{{ .URL }}" class="link">
+                                {{ .Pre }}
+                                {{ .Name }}
+                              </a>
+                          </li>
+                      {{ end }}
+                  </ul>
+              </li>
+          {{ else }}
+              <li>
+                  <a href="{{ .URL }}" class="{{.Params.class}} link">
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+  </ul>
+  </nav>
+</header>
+
+<script>
+window.onscroll = (() => {
+  const header = document.querySelector('.site-header');
+  const scrollAmount = 10;
+  
+  if (document.body.scrollTop > scrollAmount || document.documentElement.scrollTop > scrollAmount) {
+    header.classList.add('scrolling-header');
+  } else {
+    header.classList.remove('scrolling-header');
+  }
+});
+
+toggleNavigation = (() => {
+  const navigationItems = document.querySelector('.site-navigation');
+  return navigationItems.classList.toggle('expanded-navigation');
+});
+</script>

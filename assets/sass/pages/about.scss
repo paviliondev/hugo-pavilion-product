@@ -1,0 +1,28 @@
+.about-page {
+  h1 {
+    color: var(--clr-primary-300);
+  }
+
+  h2 {
+    color: var(--clr-gray-400);
+  }
+
+  p {
+    color: var(--clr-gray-300);
+  }
+
+  img {
+    border-radius: 2px;
+  }
+
+  a {
+    color: var(--clr-primary-300);
+    border-bottom: 2px solid var(--clr-primary-300);
+    transition: padding 0.25s ease;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      padding-bottom: 4px;
+    }
+  }
+}

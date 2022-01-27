@@ -6,6 +6,7 @@ homepage = "http://example.com/"
 tags = []
 features = []
 min_version = "0.41.0"
+custom_js = ['js/navbar.js']
 
 [author]
   name = ""

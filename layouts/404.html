@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main>
+  <h1>Oops! That page doesn't exist.</h1>
+  <h2>Try one of these links:</h2>
+  <ul>
+    {{ range where .Pages "Type" "page"}}
+    <li>
+      <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</main>
+{{ end }}

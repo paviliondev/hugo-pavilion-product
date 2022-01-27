@@ -1,5 +1,24 @@
-$background: #ffffff;
+// Abstract Imports
+@import 'abstracts/colors';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/utilities';
 
-body {
-  background-color: $background;
-}
+// Base Imports
+@import 'base/base';
+@import 'base/normalize';
+@import 'base/typography';
+
+// Component Imports
+@import 'components/buttons';
+@import 'components/cta';
+
+// Layout Imports
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/hero';
+
+// Page Imports
+@import 'pages/home';
+@import 'pages/pricing';
+@import 'pages/about';
