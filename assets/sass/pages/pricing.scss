@@ -3,7 +3,7 @@
   @include fluid-section;
   padding: 3.25rem;
   margin-bottom: 2rem;
-  color: var(--clr-primary-250);
+  color: var(--clr-primary-300);
 
   h1 {
     color: var(--clr-primary-300);
@@ -35,25 +35,39 @@
   table.pricing-table {
     thead th {
       padding: 0 1rem;
+      vertical-align: top;
+      position: relative;
+
       h3 {
         font-weight: 100;
         font-size: var(--font-0);
         color: var(--clr-primary-250);
         margin-bottom: 0;
       }
+
       h2 {
-        font-size: var(--font-up-5);
+        font-size: var(--font-up-4);
         color: var(--clr-primary-300);
+        white-space: nowrap;
       }
 
       p {
         font-weight: 100;
         font-size: var(--font-down-1);
         max-width: 300px;
+        margin-bottom: 60px;
       }
 
       a {
-        margin-top: auto;
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        right: 1rem;
+        text-align: center;
+      }
+
+      img {
+        margin-top: 2rem;
       }
     }
 

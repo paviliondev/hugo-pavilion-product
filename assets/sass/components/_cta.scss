@@ -6,16 +6,26 @@
   border-radius: 3rem;
   color: var(--clr-primary-50);
   height: 16rem;
-  margin: 3rem 0;
+  margin: 10rem 0;
+
+  @include for-size('mobile-extra-large-down') {
+    height: unset;
+    margin: 4rem 0;
+  }
 
   &-text-content {
     padding: 1rem;
+
     @include for-size('tablet-up') {
       padding: 3rem;
 
       p {
         max-width: 65%;
       }
+    }
+
+    @include for-size('mobile-extra-large-down') {
+      padding: 2rem;
     }
 
     h3 {

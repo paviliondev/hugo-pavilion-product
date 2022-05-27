@@ -136,21 +136,27 @@
 @mixin section-title($isCentered: 'false') {
   h3 {
     color: var(--clr-primary-300);
-    font-size: 2rem;
+    font-size: 2.5rem;
 
     @if ($isCentered == 'true') {
       text-align: center;
     }
 
+    @include for-size('mobile-extra-large-down') {
+      margin-bottom: 1rem;
+    }
+
     + p {
       color: var(--clr-primary-250);
-      font-size: 1rem;
       @include for-size('medium-up') {
-        max-width: 38%;
+        max-width: 60%;
       }
       @if ($isCentered == 'true') {
         margin: 0 auto;
         text-align: center;
+      }
+      @include for-size('mobile-extra-large-down') {
+        padding: 0 1rem;
       }
     }
   }

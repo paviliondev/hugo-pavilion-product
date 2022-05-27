@@ -1,10 +1,10 @@
 <header class="site-header">
   <div class="site-logo">
     <a href="{{ .Site.BaseURL }}">
+      {{ $logo := resources.Get .Site.Params.logo }}
       <img
-        src="https://thepavilion.io/uploads/default/original/2X/e/e967d39581b01101127019b5754c72816d169f41.png"
+        src="{{ $logo.RelPermalink }}"
         alt="Pavilion logo"
-        width="200"
         loading="lazy"
       />
     </a>
@@ -19,7 +19,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.main.Sort.ByWeight}}
           {{ if .HasChildren }}
-              <li class="{{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }} menu-dropdown">
+              <li class="{{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }}menu-dropdown">
                   <a href="#" class="link">
                     <span>{{ .Name }}</span>
                   </a>
@@ -35,8 +35,8 @@
                   </ul>
               </li>
           {{ else }}
-              <li>
-                  <a href="{{ .URL }}" class="{{.Params.class}} link">
+              <li class="menu-item {{ .Params.item }}">
+                  <a href="{{ .URL }}" class="{{ .Params.link }} link">
                       <span>{{ .Name }}</span>
                   </a>
               </li>
@@ -50,7 +50,7 @@
 window.onscroll = (() => {
   const header = document.querySelector('.site-header');
   const scrollAmount = 10;
-  
+
   if (document.body.scrollTop > scrollAmount || document.documentElement.scrollTop > scrollAmount) {
     header.classList.add('scrolling-header');
   } else {
