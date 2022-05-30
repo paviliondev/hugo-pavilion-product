@@ -114,6 +114,10 @@
       &:hover {
         .dropdown-panel {
           display: flex;
+
+          @include for-size('mobile-extra-large-down') {
+            display: block;
+          }
         }
       }
     }
