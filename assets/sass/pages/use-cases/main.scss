@@ -3,13 +3,16 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-
   background: var(--clr-developers-100);
   padding: 1rem 0.5rem;
   text-align: center;
   margin: 0 auto;
   margin-top: 12rem;
   border-radius: 45px;
+
+  @include for-size('mobile-extra-large-down') {
+    margin-top: 4rem;
+  }
 
   .usecases-info {
     max-width: 700px;
@@ -22,6 +25,14 @@
       margin: 0 auto;
       width: 75%;
       color: var(--clr-developers-150);
+    }
+
+    @include for-size('mobile-extra-large-down') {
+      max-width: 100%;
+
+      h1 {
+        font-size: 2.5rem;
+      }
     }
   }
 
@@ -81,6 +92,10 @@
         width: 400px;
         height: 400px;
       }
+
+      @include for-size('mobile-extra-large-down') {
+        display: none;
+      }
     }
 
     .right-portion {
@@ -89,6 +104,7 @@
           display: grid;
           grid-template-columns: 12fr 88fr;
           padding: 1rem;
+
           &.review-submissions {
             background: var(--clr-developers-100);
             border-radius: 10px;
@@ -98,15 +114,33 @@
             grid-column: 2 / span 1;
           }
         }
-
-
       }
-      h1,h3 {
+
+      h1, h3 {
         color: var(--clr-developers-200);
         font-weight: 100;
       }
+
       p {
         color: var(--clr-developers-120);
+      }
+    }
+  }
+
+  @include for-size('mobile-extra-large-down') {
+    margin: 4em 0;
+
+    .content {
+      display: flex;
+
+      .left-portion {
+        display: none;
+      }
+
+      .right-portion {
+        .image {
+          margin-right: 1em;
+        }
       }
     }
   }
@@ -149,6 +183,15 @@
       }
     }
   }
+
+  @include for-size('mobile-extra-large-down') {
+    padding: 0em;
+    margin-top: 2em;
+
+    .review-box {
+      padding: 1em;
+    }
+  }
 }
 
 .try-box {
@@ -174,6 +217,20 @@
       margin-top: -50px;
     }
   }
+
+  @include for-size('mobile-extra-large-down') {
+    display: flex;
+    height: unset;
+    margin: 15em 0 5em;
+
+    .text {
+      padding: 0;
+    }
+
+    .image {
+      display: none;
+    }
+  }
 }
 
 .usecases-cta {
@@ -182,6 +239,7 @@
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
+
     li {
       a {
         padding: 0.5rem 1.5rem;
@@ -194,6 +252,11 @@
           color: var(--clr-developers-200);
         }
       }
+    }
+
+    @include for-size('mobile-extra-large-down') {
+      justify-content: center;
+      margin-bottom: 0;
     }
   }
 

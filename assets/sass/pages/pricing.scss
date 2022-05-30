@@ -118,3 +118,31 @@
     }
   }
 }
+
+#content {
+  @include for-size('mobile-extra-large-up') {
+    .pricing-chart.desktop {
+      display: block;
+    }
+    .pricing-chart.mobile {
+      display: none;
+    }
+  }
+
+  @include for-size('mobile-extra-large-down') {
+    .pricing-chart.desktop {
+      display: none;
+    }
+    .pricing-chart.mobile {
+      display: block;
+      border: unset;
+      padding: 0 2rem;
+    }
+    .hero-pricing p {
+      max-width: 100%;
+    }
+    .pricing-item-mobile {
+      margin-bottom: 4em;
+    }
+  }
+}
