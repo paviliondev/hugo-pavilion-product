@@ -14,7 +14,7 @@
 
 <!-- Styles -->
 {{ $style := resources.Get "sass/main.scss" | toCSS }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
 {{ range .Site.Params.custom_js -}}
 <script type="text/javascript" src="{{ . | absURL }}"></script>
