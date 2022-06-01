@@ -74,6 +74,7 @@
       &:focus {
         background: var(--clr-primary-300);
         transform: scale(1.05);
+
         a {
           color: var(--clr-primary-50);
           text-decoration: none;
@@ -96,48 +97,48 @@
         }
       }
 
-      &.associations {
-        background: var(--clr-primary-100);
+      &.clubs {
+        background: var(--clr-clubs-100);
 
         &:hover,
         &:focus {
-          background: var(--clr-primary-200);
+          background: var(--clr-clubs-200);
           a {
-            color: var(--clr-primary-50);
+            color: var(--clr-clubs-50);
           }
         }
         a {
-          color: var(--clr-primary-300);
+          color: var(--clr-clubs-300);
         }
       }
 
       &.educational {
-        background: var(--clr-primary-100);
+        background: var(--clr-education-100);
 
         &:hover,
         &:focus {
-          background: var(--clr-primary-200);
+          background: var(--clr-education-200);
           a {
-            color: var(--clr-primary-50);
+            color: var(--clr-education-50);
           }
         }
         a {
-          color: var(--clr-primary-300);
+          color: var(--clr-education-300);
         }
       }
 
       &.professional {
-        background: var(--clr-primary-100);
+        background: var(--clr-professional-100);
 
         &:hover,
         &:focus {
-          background: var(--clr-primary-200);
+          background: var(--clr-professional-200);
           a {
-            color: var(--clr-primary-50);
+            color: var(--clr-professional-50);
           }
         }
         a {
-          color: var(--clr-primary-300);
+          color: var(--clr-professional-300);
         }
       }
     }

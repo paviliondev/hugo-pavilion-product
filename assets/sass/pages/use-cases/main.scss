@@ -1,9 +1,39 @@
+$clr-50: #{var(--clr-50)};
+$clr-100: #{var(--clr-100)};
+$clr-150: #{var(--clr-150)};
+$clr-200: #{var(--clr-200)};
+
+#content.clubs {
+  --clr-50: #{var(--clr-clubs-500)};
+  --clr-100: #{var(--clr-clubs-100)};
+  --clr-150: #{var(--clr-clubs-150)};
+  --clr-200: #{var(--clr-clubs-200)};
+}
+#content.developers {
+  --clr-50: #{var(--clr-developers-500)};
+  --clr-100: #{var(--clr-developers-100)};
+  --clr-150: #{var(--clr-developers-150)};
+  --clr-200: #{var(--clr-developers-200)};
+}
+#content.education {
+  --clr-50: #{var(--clr-education-500)};
+  --clr-100: #{var(--clr-education-100)};
+  --clr-150: #{var(--clr-education-150)};
+  --clr-200: #{var(--clr-education-200)};
+}
+#content.professional {
+  --clr-50: #{var(--clr-professional-500)};
+  --clr-100: #{var(--clr-professional-100)};
+  --clr-150: #{var(--clr-professional-150)};
+  --clr-200: #{var(--clr-professional-200)};
+}
+
 .usecases-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  background: var(--clr-developers-100);
+  background: $clr-100;
   padding: 1rem 0.5rem;
   text-align: center;
   margin: 0 auto;
@@ -19,12 +49,13 @@
 
     h1 {
       font-size: 3.5rem;
-      color: var(--clr-developers-200);
+      color: $clr-200;
     }
+
     p {
       margin: 0 auto;
       width: 75%;
-      color: var(--clr-developers-150);
+      color: $clr-150;
     }
 
     @include for-size('mobile-extra-large-down') {
@@ -73,7 +104,7 @@
   text-align: center;
 
   span {
-    color: var(--clr-developers-200);
+    color: var(--clr-200);
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -106,7 +137,7 @@
           padding: 1rem;
 
           &.review-submissions {
-            background: var(--clr-developers-100);
+            background: $clr-100;
             border-radius: 10px;
           }
 
@@ -117,12 +148,12 @@
       }
 
       h1, h3 {
-        color: var(--clr-developers-200);
+        color: $clr-200;
         font-weight: 100;
       }
 
       p {
-        color: var(--clr-developers-120);
+        color: $clr-150;
       }
     }
   }
@@ -149,22 +180,22 @@
 .main-client {
   text-align: center;
   .heading {
-    color: var(--clr-developers-200);
+    color: $clr-200;
   }
 }
 
 .client-review {
-  background: var(--clr-developers-100);
+  background: $clr-100;
   padding: 3em 10em 0em;
   margin-bottom: 100px;
   height: 200px;
 
   .review-box {
-    background: var(--clr-developers-50);
+    background: $clr-50;
     border-radius: 10px;
     padding: 1em 5em;
     box-shadow: 0px 4px 40px -14px rgba(0, 0, 0, 0.25);
-    color: var(--clr-developers-200);
+    color: $clr-200;
     font-weight: 100;
     font-size: 20px;
 
@@ -201,7 +232,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: var(--clr-developers-200);
+  background: $clr-200;
   border-radius: 40px;
   color: #ffffff;
 
@@ -245,11 +276,11 @@
         padding: 0.5rem 1.5rem;
 
         &.btn-primary {
-          background-color: var(--clr-developers-200);
+          background-color: $clr-200;
         }
 
         &.btn-secondary {
-          color: var(--clr-developers-200);
+          color: $clr-200;
         }
       }
     }
@@ -264,11 +295,11 @@
     li {
       a.btn-primary {
         background-color: #FFFFFF;
-        color: var(--clr-developers-200) !important;
+        color: $clr-200 !important;
       }
 
       a.btn-secondary {
-        background-color: var(--clr-developers-200);
+        background-color: $clr-200;
         box-shadow: unset;
         color: #FFFFFF;
       }
