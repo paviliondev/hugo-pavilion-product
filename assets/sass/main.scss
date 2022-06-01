@@ -10,13 +10,10 @@
 @import 'base/typography';
 
 // Component Imports
+@import 'components/header';
+@import 'components/footer';
 @import 'components/buttons';
 @import 'components/cta';
-
-// Layout Imports
-@import 'layouts/header';
-@import 'layouts/footer';
-@import 'layouts/hero';
 
 // Page Imports
 @import 'pages/home';

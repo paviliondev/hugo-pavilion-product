@@ -1,40 +1,40 @@
+@import "abstracts/variables";
+
 .cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--clr-primary-300);
+  background: $clr-50;
   border-radius: 3rem;
-  color: var(--clr-primary-50);
-  height: 16rem;
-  margin: 10rem 0;
+  position: relative;
+
+  &.margin-top {
+    margin-top: 10em;
+  }
 
   @include for-size('mobile-extra-large-down') {
     height: unset;
-    margin: 4rem 0;
+    margin: 4rem 0 !important;
   }
 
   &-text-content {
     padding: 1rem;
-
-    @include for-size('tablet-up') {
-      padding: 3rem;
-
-      p {
-        max-width: 65%;
-      }
-    }
+    max-width: 70%;
 
     @include for-size('mobile-extra-large-down') {
-      padding: 2rem;
+      max-width: unset;
     }
 
-    h3 {
-      font-size: 1.5rem;
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $clr-300;
+      margin-bottom: .5em;
     }
 
     a {
-      color: var(--clr-primary-50);
-      border-bottom: 2px solid var(--clr-primary-50);
+      color: $clr-50;
+      border-bottom: 2px solid $clr-50;
       transition: padding 0.25s ease;
 
       &:hover {
@@ -53,20 +53,67 @@
     }
 
     a.btn-primary {
-      background: var(--clr-gray-100);
-      color: var(--clr-primary-300) !important;
-    }
-
-    a.btn-secondary {
-      background: var(--clr-primary-300);
+      background: $clr-300;
 
       &:hover {
         color: var(--clr-gray-100);
       }
     }
+
+    a.btn-secondary {
+      background: var(--clr-gray-100);
+      color: $clr-300 !important;
+    }
+
+    @include for-size('tablet-up') {
+      padding: 3rem;
+
+      p {
+        max-width: 65%;
+      }
+    }
+
+    @include for-size('mobile-extra-large-down') {
+      padding: 2rem;
+    }
+  }
+
+  &.large &-text-content .title {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    margin-bottom: .25rem;
+
+    @include for-size('mobile-extra-large-down') {
+      font-size: 3rem;
+      max-width: unset;
+      margin: 2rem 0 !important;
+    }
+  }
+
+  &-buttons {
+    ul {
+      margin: 1rem 0 0 0;
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      li {
+        a {
+          padding: 0.5rem 1.5rem;
+        }
+      }
+
+      @include for-size('mobile-extra-large-down') {
+        justify-content: center;
+        margin-bottom: 0;
+      }
+    }
   }
 
   &-image-content {
+    position: absolute;
+    right: -7rem;
+
     img {
       display: none;
       margin-top: 2rem;
