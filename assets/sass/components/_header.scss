@@ -29,8 +29,8 @@
     }
 
     img {
-      max-width: 90%;
-      width: 400px;
+      height: 60px;
+      max-width: 400px;
     }
   }
 
@@ -50,6 +50,7 @@
   }
 
   .site-navigation {
+    display: flex;
     margin-left: auto;
     align-self: center;
 
@@ -163,6 +164,34 @@
           margin-right: 1rem;
         }
       }
+    }
+  }
+
+  .site-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 2em;
+  }
+
+  &.centered {
+    justify-content: space-between;
+
+    .site-logo {
+      width: 25%;
+    }
+
+    .site-navigation {
+     margin-left: unset;
+
+      ul {
+        justify-content: center;
+      }
+    }
+
+    .site-cta {
+      width: 25%;
+      margin-left: unset;
     }
   }
 }

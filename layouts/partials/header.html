@@ -1,12 +1,8 @@
-<header class="site-header">
+<header class="site-header {{ .Site.Params.header.class }}">
   <div class="site-logo">
     <a href="{{ .Site.BaseURL }}">
       {{ $logo := resources.Get .Site.Params.logo }}
-      <img
-        src="{{ $logo.RelPermalink }}"
-        alt="Pavilion logo"
-        loading="lazy"
-      />
+      <img src="{{ $logo.RelPermalink }}" alt="Pavilion logo" loading="lazy"/>
     </a>
     <div class="hamburger-toggle">
       <button class='hamburger-button' onclick="toggleNavigation()">
@@ -42,8 +38,13 @@
               </li>
           {{ end }}
       {{ end }}
-  </ul>
+    </ul>
   </nav>
+  <div class="site-cta">
+    <a href="{{ .Site.Params.header.cta.url }}" class="{{ .Site.Params.header.cta.class }} link">
+      <span>{{ .Site.Params.header.cta.name }}</span>
+    </a>
+  </div>
 </header>
 
 <script>

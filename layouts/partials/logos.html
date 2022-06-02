@@ -1,0 +1,8 @@
+<section class="logos">
+  {{ range . }}
+    {{ $logo := resources.Get .logo }}
+    <a target="_blank" href="{{ .link }}">
+      <img src="{{ $logo.RelPermalink }}">
+    </a>
+  {{ end }}
+</section>

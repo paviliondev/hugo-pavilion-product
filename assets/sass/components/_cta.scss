@@ -12,6 +12,25 @@
     margin-top: 10em;
   }
 
+  &.centered {
+    justify-content: center;
+    text-align: center;
+
+    .cta-image-content {
+      display: none;
+    }
+
+    .cta-text-content {
+      p {
+        max-width: unset;
+      }
+    }
+
+    .cta-buttons ul {
+      justify-content: center;
+    }
+  }
+
   @include for-size('mobile-extra-large-down') {
     height: unset;
     margin: 4rem 0 !important;
