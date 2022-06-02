@@ -9,7 +9,6 @@
   // Abstract Colors
   --clr-50: #{var(--clr-primary-50)};
   --clr-100: #{var(--clr-primary-100)};
-  --clr-150: #{var(--clr-primary-150)};
   --clr-200: #{var(--clr-primary-200)};
   --clr-250: #{var(--clr-primary-250)};
   --clr-300: #{var(--clr-primary-300)};
@@ -67,41 +66,36 @@
 }
 
 #content.clubs {
-  --clr-50: #{var(--clr-clubs-100)};
   --clr-100: #{var(--clr-clubs-100)};
-  --clr-150: #{var(--clr-clubs-150)};
   --clr-200: #{var(--clr-clubs-200)};
   --clr-300: #{var(--clr-clubs-300)};
   --clr-400: #{var(--clr-clubs-400)};
+  --clr-500: #{var(--clr-clubs-500)};
 }
 #content.developers {
-  --clr-50: #{var(--clr-developers-100)};
   --clr-100: #{var(--clr-developers-100)};
-  --clr-150: #{var(--clr-developers-150)};
   --clr-200: #{var(--clr-developers-200)};
   --clr-300: #{var(--clr-developers-300)};
   --clr-400: #{var(--clr-developers-400)};
+  --clr-500: #{var(--clr-developers-500)};
 }
 #content.education {
-  --clr-50: #{var(--clr-education-100)};
   --clr-100: #{var(--clr-education-100)};
-  --clr-150: #{var(--clr-education-150)};
   --clr-200: #{var(--clr-education-200)};
   --clr-300: #{var(--clr-education-300)};
   --clr-400: #{var(--clr-education-400)};
+  --clr-500: #{var(--clr-education-500)};
 }
 #content.professional {
-  --clr-50: #{var(--clr-professional-100)};
   --clr-100: #{var(--clr-professional-100)};
-  --clr-150: #{var(--clr-professional-150)};
   --clr-200: #{var(--clr-professional-200)};
-  --clr-300: #{var(--clr-professional-300)};
+  --clr-300: #{var(--clr-professional-30)};
   --clr-400: #{var(--clr-professional-400)};
+  --clr-500: #{var(--clr-professional-500)};
 }
 
 $clr-50: #{var(--clr-50)};
 $clr-100: #{var(--clr-100)};
-$clr-150: #{var(--clr-150)};
 $clr-200: #{var(--clr-200)};
 $clr-300: #{var(--clr-300)};
 $clr-400: #{var(--clr-400)};
