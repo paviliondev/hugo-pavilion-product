@@ -1,0 +1,8 @@
+<div class="cta-buttons">
+  <ul>
+    <li><a class="btn-primary" href="{{ .primary.url }}" title="{{ .primary.text }}">{{ .primary.text }}</a></li>
+    {{ if isset . "secondary" }}
+      <li><a class="btn-secondary" href="{{ .secondary.url }}" title="{{ .secondary.text }}">{{ .secondary.text }}</a></li>
+    {{ end }}
+  </ul>
+</div>

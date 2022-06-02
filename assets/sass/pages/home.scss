@@ -27,7 +27,7 @@
   }
 }
 
-.wizard-use-cases {
+.use-cases {
   @include section-title('true');
   margin: 8rem 0;
 
@@ -204,7 +204,7 @@
   }
 }
 
-.love-wizard {
+.validation {
   @include section-title('true');
 
   @include for-size('mobile-extra-large-down') {

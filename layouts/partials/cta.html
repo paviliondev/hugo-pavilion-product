@@ -1,0 +1,16 @@
+<section class="cta {{ .class }}">
+  <div class="cta-text-content">
+    {{ $title := or ( .title ) "Try it out on your community today." }}
+    <div class="title">{{ $title }}</div>
+    {{ $description := or ( .description ) "Follow our helpful how-to videos showing how to install the plugin on your Discourse"}}
+    <p>{{ $description }}</p>
+    {{ if isset . "primary" }}
+      {{ partial "cta-buttons" . }}
+    {{ end }}
+  </div>
+  <div class="cta-image-content">
+    {{ $image_url := or ( .image ) "/images/laptop.svg" }}
+    {{ $image := resources.Get $image_url }}
+    <img src="{{ $image.RelPermalink }}" alt="" />
+  </div>
+</section>

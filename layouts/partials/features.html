@@ -1,0 +1,23 @@
+<section id="features">
+  <h3>{{ .title }}</h3>
+  <p>{{ .description }}</p>
+  <div class="features-items">
+    {{ range $index, $item := .items }}
+      <div class="features-items-item {{ if eq $index 0 }}current{{ end }}" onmouseenter="changeCurrent()">
+        <h4>{{ $item.title }}</h4>
+        <p>{{ $item.description }}</p>
+      </div>
+      <div class="features-image">
+        {{ $image := resources.Get $item.image }}
+        <img alt="mockup of a feature" src="{{ $image.RelPermalink }}" />
+      </div>
+    {{end}}
+  </div>
+</section>
+
+<script>
+  function changeCurrent() {
+    this.event.target.parentElement.querySelectorAll( ".current" ).forEach( e => e.classList.remove( "current" ) );
+    this.event.target.classList.add( "current" );
+  }
+</script>
