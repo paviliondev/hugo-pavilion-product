@@ -2,7 +2,6 @@
 @import 'abstracts/colors';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-@import 'abstracts/utilities';
 
 // Base Imports
 @import 'base/base';
@@ -18,4 +17,4 @@
 // Page Imports
 @import 'pages/home';
 @import 'pages/pricing';
-@import 'pages/use-cases/main';
+@import 'pages/usecases';
