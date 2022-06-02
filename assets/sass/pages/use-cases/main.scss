@@ -1,5 +1,11 @@
 @import "abstracts/variables";
 
+#content.usecase {
+  #features {
+    margin: 14rem 0;
+  }
+}
+
 .usecases-heading {
   margin: 10rem auto 2rem;
   text-align: center;
@@ -9,76 +15,10 @@
   }
 
   span {
-    color: $clr-200;
+    color: $clr-300;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-  }
-}
-
-.how-it-works {
-  margin: 12em 0;
-
-  .content {
-    display: grid;
-    grid-template-columns: 55% 45%;
-
-    .left-portion {
-      img {
-        width: 400px;
-        height: 400px;
-      }
-
-      @include for-size('mobile-extra-large-down') {
-        display: none;
-      }
-    }
-
-    .right-portion {
-      ul {
-        li {
-          display: grid;
-          grid-template-columns: 12fr 88fr;
-          padding: 1rem;
-
-          &.review-submissions {
-            background: $clr-100;
-            border-radius: 10px;
-          }
-
-          .subtitle {
-            grid-column: 2 / span 1;
-          }
-        }
-      }
-
-      h1, h3 {
-        color: $clr-200;
-        font-weight: 100;
-      }
-
-      p {
-        color: $clr-150;
-      }
-    }
-  }
-
-  @include for-size('mobile-extra-large-down') {
-    margin: 4em 0;
-
-    .content {
-      display: flex;
-
-      .left-portion {
-        display: none;
-      }
-
-      .right-portion {
-        .image {
-          margin-right: 1em;
-        }
-      }
-    }
   }
 }
 
@@ -92,7 +32,7 @@
 .client-review {
   background: $clr-100;
   padding: 3em 10em 0em;
-  margin-bottom: 100px;
+  margin-bottom: 20rem;
   height: 200px;
 
   .review-box {

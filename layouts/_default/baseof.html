@@ -5,7 +5,7 @@
   </head>
   <body class="container">
     {{ partial "header.html" . }}
-    <main id="content" class="{{ with .Params.use_case }}{{ . }}{{ end }}">{{ block "main" . }}{{ end }}</main>
+    <main id="content" class="{{ with .Params.use_case }}usecase {{ . }}{{ end }}">{{ block "main" . }}{{ end }}</main>
     {{ partial "footer.html" . }}
   </body>
 </html>
