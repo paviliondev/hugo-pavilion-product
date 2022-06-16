@@ -1,7 +1,7 @@
 .hero-pricing {
   background: var(--clr-primary-100);
   @include fluid-section;
-  padding: 1rem 3.25rem;
+  padding: 1.5rem 3rem;
   margin-bottom: 2rem;
   color: var(--clr-primary-300);
   display: flex;
@@ -19,6 +19,11 @@
 
   img.click-here {
     height: 70px;
+  }
+
+  .mobile-cta {
+    width: 100%;
+    margin-top: 1em;
   }
 }
 
@@ -154,9 +159,15 @@
     .pricing-chart.mobile {
       display: none;
     }
+    .mobile-cta {
+      display: none;
+    }
   }
 
   @include for-size('mobile-extra-large-down') {
+    img.click-here {
+      display: none;
+    }
     .pricing-chart.desktop {
       display: none;
     }
@@ -170,6 +181,9 @@
     }
     .pricing-item-mobile {
       margin-bottom: 4em;
+    }
+    .footnotes {
+      display: none;
     }
   }
 }

@@ -14,11 +14,6 @@
     flex-flow: row wrap;
   }
 
-  @include for-size('mobile-extra-large-down') {
-    padding: .5rem 1rem;
-    max-height: unset;
-  }
-
   .site-logo {
     display: flex;
     padding: 1rem 0;
@@ -192,6 +187,19 @@
     .site-cta {
       width: 25%;
       margin-left: unset;
+    }
+  }
+
+  @include for-size('mobile-extra-large-down') {
+    padding: .5rem 1rem;
+    max-height: unset;
+
+    .site-logo img {
+      height: 30px;
+    }
+
+    .site-cta {
+      display: none;
     }
   }
 }
