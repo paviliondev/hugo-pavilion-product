@@ -1,4 +1,4 @@
-<section class="cta {{ .class }}">
+<div class="cta {{ .class }}">
   <div class="cta-text-content">
     {{ $title := or ( .title ) "Try it out on your community today." }}
     <div class="title">{{ $title }}</div>
@@ -8,9 +8,11 @@
       {{ partial "cta-buttons" . }}
     {{ end }}
   </div>
-  <div class="cta-image-content">
-    {{ $image_url := or ( .image ) "/images/laptop.svg" }}
-    {{ $image := resources.Get $image_url }}
-    <img src="{{ $image.RelPermalink }}" alt="" />
-  </div>
-</section>
+  {{ with .image }}
+    <div class="cta-image-content">
+      {{ $image_url := or ( . ) "/images/laptop.svg" }}
+      {{ $image := resources.Get $image_url }}
+      <img src="{{ $image.RelPermalink }}" alt="" />
+    </div>
+  {{ end }}
+</div>

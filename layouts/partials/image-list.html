@@ -1,0 +1,20 @@
+<div class="image-list">
+  {{ if .Title }}
+    <h3>{{ .Title }}</h3>
+  {{ end }}
+  {{ if .Description }}
+    <p>{{ .Description }}</p>
+  {{ end }}
+  <div class="list-container">
+    <ul>
+      {{ range .List }}
+        <li>
+          <a target="_blank" href="{{ .link }}">
+            {{ $logo := resources.Get .image }}
+            <img src="{{ $logo.RelPermalink }}" alt="{{ .title }}">
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

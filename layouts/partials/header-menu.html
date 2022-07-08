@@ -1,0 +1,35 @@
+<ul>
+  {{ $currentPage := . }}
+  {{ range .Site.Menus.main.Sort.ByWeight}}
+    <li class="menu-item {{ .Params.item }} {{ if .HasChildren }} {{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }}menu-dropdown{{ end }}">
+      <a href="{{ .URL }}" class="{{ .Params.link }} link">
+        <span>{{ .Name }}</span>
+      </a>
+      {{ if .HasChildren }}
+        <ul class="dropdown-panel">
+          {{ range .Children }}
+            <li class="menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+              <a href="{{ .URL }}" class="link">
+                <div class="menu-item-image">
+                  {{ with .Params.icon }}
+                    <i class="fas fa-{{ . }}"></i>
+                  {{ end }}
+                  {{ with .Params.image }}
+                    {{ $logo := resources.Get . }}
+                    <img src="{{ $logo.RelPermalink }}">
+                  {{ end }}
+                </div>
+                <div class="menu-item-content">
+                  <div class="menu-item-name">{{ .Name }}</div>
+                  {{ with .Params.description }}
+                    <div class="menu-item-description">{{ . }}</div>
+                  {{ end }}
+                </div>
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>

@@ -1,0 +1,35 @@
+<div class="boxed-list">
+  {{ with .Title }}
+    <h3>{{ . }}</h3>
+  {{ end }}
+  {{ with .Description }}
+    <p>{{ . }}</p>
+  {{ end }}
+  <ul>
+    {{ range .List }}
+      <li>
+        <a target="_blank" href="{{ .link }}" class="box {{ .class }} %>">
+          {{ with .image }}
+            <div class="image">
+              {{ $logo := resources.Get . }}
+              <img src="{{ $logo.RelPermalink }}">
+            </div>
+          {{ end }}
+          {{ if .title }}
+            <h3>{{ .title }}</h3>
+          {{ end }}
+          {{ if .description }}
+            <p>{{ .description }}</p>
+          {{end }}
+        </a>
+      </li>
+    {{ end }}
+    {{ if (isset .more "link") }}
+      <li>
+        <a target="_blank" href="{{ .more.link }}" class="box more">
+          <h3>{{ .more.text }}</h3>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

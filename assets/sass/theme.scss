@@ -13,8 +13,6 @@
 @import 'components/footer';
 @import 'components/buttons';
 @import 'components/cta';
-
-// Page Imports
-@import 'pages/home';
-@import 'pages/pricing';
-@import 'pages/usecases';
+@import 'components/boxed-list';
+@import 'components/image-list';
+@import 'components/feature-matrix';

@@ -1,0 +1,27 @@
+<div class="feature-matrix">
+  <div class="feature-list">
+    {{ range $index, $item := .list }}
+      <div class="feature-item {{ .class }}">
+        <div class="image">
+          {{ with $item.image }}
+            {{ $image := resources.Get . }}
+            {{ with $image }}
+              <img alt="feature icon" src="{{ $image.RelPermalink }}" />
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="feature">
+          <h4>{{ $item.title }}</h4>
+          <p>{{ $item.description }}</p>
+        </div>
+      </div>
+    {{end}}
+  </div>
+  <div class="feature-description">
+    <h3>{{ .title }}</h3>
+    <p>{{ .description }}</p>
+    {{ with .buttons }}
+      {{ partial "cta-buttons" . }}
+    {{ end }}
+  </div>
+</div>

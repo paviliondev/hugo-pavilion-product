@@ -3,7 +3,7 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="container">
+  <body class="container{{ with .Layout }} {{ . }}{{ end }}">
     {{ partial "header.html" . }}
     <main id="content" class="{{ with .Params.use_case }}usecase {{ . }}{{ end }}">{{ block "main" . }}{{ end }}</main>
     {{ partial "footer.html" . }}

@@ -13,11 +13,13 @@
 <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
 
 <!-- Styles -->
-{{ $style := resources.Get "sass/main.scss" | toCSS }}
+{{ $style := resources.Get "sass/theme.scss" | toCSS }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
 {{ range .Site.Params.custom_js -}}
 <script type="text/javascript" src="{{ . | absURL }}"></script>
 {{- end }}
+
+{{ partial "partials/head-includes" }}
 
 <title>{{ .Site.Title }} - {{ .Title }}</title>

@@ -11,40 +11,9 @@
     </div>
   </div>
   <nav class="site-navigation">
-    <ul>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main.Sort.ByWeight}}
-          {{ if .HasChildren }}
-              <li class="{{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }}menu-dropdown">
-                  <a href="#" class="link">
-                    <span>{{ .Name }}</span>
-                  </a>
-                  <ul class="dropdown-panel">
-                      {{ range .Children }}
-                          <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                              <a href="{{ .URL }}" class="link">
-                                {{ .Pre }}
-                                {{ .Name }}
-                              </a>
-                          </li>
-                      {{ end }}
-                  </ul>
-              </li>
-          {{ else }}
-              <li class="menu-item {{ .Params.item }}">
-                  <a href="{{ .URL }}" class="{{ .Params.link }} link">
-                      <span>{{ .Name }}</span>
-                  </a>
-              </li>
-          {{ end }}
-      {{ end }}
-    </ul>
+    {{ partial "header-menu" . }}
   </nav>
-  <div class="site-cta">
-    <a href="{{ .Site.Params.header.cta.url }}" class="{{ .Site.Params.header.cta.class }} link">
-      <span>{{ .Site.Params.header.cta.name }}</span>
-    </a>
-  </div>
+  {{ partial "site-cta" . }}
 </header>
 
 <script>
