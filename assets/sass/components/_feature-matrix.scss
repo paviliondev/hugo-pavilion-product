@@ -2,23 +2,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
-  padding: 1em;
 
   .feature-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: black;
+    background-color: lightgray;
     grid-gap: 1px;
 
     .feature-item {
       background-color: white;
-      padding: 1em;
+      padding: 2em;
 
       .image {
         display: inline-block;
         padding: .5em;
         background-color: rgba(lightgray, 0.2);
         border-radius: 4px;
+
+        img {
+          height: 25px;
+        }
       }
     }
   }

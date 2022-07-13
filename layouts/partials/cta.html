@@ -1,9 +1,14 @@
 <div class="cta {{ .class }}">
   <div class="cta-text-content">
-    {{ $title := or ( .title ) "Try it out on your community today." }}
-    <div class="title">{{ $title }}</div>
-    {{ $description := or ( .description ) "Follow our helpful how-to videos showing how to install the plugin on your Discourse"}}
-    <p>{{ $description }}</p>
+    {{ with .surtitle }}
+      <div class="surtitle">{{ . }}</div>
+    {{ end }}
+    {{ with .title }}
+      <div class="title">{{ . }}</div>
+    {{ end }}
+    {{ with .description }}
+      <div class="description">{{ . }}</div>
+    {{ end }}
     {{ if isset . "primary" }}
       {{ partial "cta-buttons" . }}
     {{ end }}

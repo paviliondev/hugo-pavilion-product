@@ -5,9 +5,11 @@
         <div class="image">
           {{ with $item.image }}
             {{ $image := resources.Get . }}
-            {{ with $image }}
-              <img alt="feature icon" src="{{ $image.RelPermalink }}" />
-            {{ end }}
+            <a href="{{ with $item.url }}{{ . }}{{ end }}" target="_blank">
+              {{ with $image }}
+                <img alt="feature icon" src="{{ $image.RelPermalink }}" />
+              {{ end }}
+            </a>
           {{ end }}
         </div>
         <div class="feature">

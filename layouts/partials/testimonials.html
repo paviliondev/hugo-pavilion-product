@@ -1,0 +1,37 @@
+<div class="testimonials">
+  <h2 class="title">{{ .title }}</h2>
+  <ul>
+    {{ range $index, $item := .list }}
+      <li class="testimonial">
+        <div class="content">
+          {{ $quote := resources.Get "/images/clients/quote.svg" }}
+          {{ with $quote }}
+            <img class="quote left" src="{{ .RelPermalink }}" />
+          {{ end }}
+          <p>{{ $item.content }}</p>
+          {{ with $quote }}
+            <img class="quote right" src="{{ .RelPermalink }}" />
+          {{ end }}
+        </div>
+        <div class="user">
+          {{ with $item.avatar }}
+            {{ $avatar := resources.Get . }}
+            {{ with $avatar }}
+              <div class="avatar">
+                <img alt="{{ $item.name }}" src="{{ $avatar.RelPermalink }}" />
+              </div>
+            {{ end }}
+          {{ end }}
+          <div class="details">
+            {{ with $item.name }}
+              <div class="name">{{ . }}</div>
+            {{ end }}
+            {{ with $item.description }}
+              <div class="description">{{ . }}</div>
+            {{ end }}
+          </div>
+        </div>
+      </li>
+    {{end}}
+  </ul>
+</div>
