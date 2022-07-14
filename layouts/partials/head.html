@@ -20,6 +20,9 @@
 <script type="text/javascript" src="{{ . | absURL }}"></script>
 {{- end }}
 
+{{ $js := resources.Get "javascripts/theme.js" }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+
 {{ partial "partials/head-includes" }}
 
 <title>{{ .Site.Title }} - {{ .Title }}</title>
