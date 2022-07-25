@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
+  box-shadow: var(--shadow-lg);
 
   .feature-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: lightgray;
     grid-gap: 1px;
 
     .feature-item {

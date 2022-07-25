@@ -63,6 +63,11 @@
   --line-height-small: 1;
   --line-height-medium: 1.2; // Headings or large text
   --line-height-large: 1.4; // Normal or small text
+
+  // Shadows
+  --shadow-sm: 0px 1px 15px -5px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0px 0px 75px -32px rgba(0, 0, 0, 0.25); // TODO (currently same as lg)
+  --shadow-lg: 0px 0px 75px -32px rgba(0, 0, 0, 0.25);
 }
 
 #content.clubs {
