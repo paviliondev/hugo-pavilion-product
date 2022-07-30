@@ -2,7 +2,9 @@
   <div class="site-logo">
     <a href="{{ .Site.BaseURL }}">
       {{ $logo := resources.Get .Site.Params.logo }}
-      <img src="{{ $logo.RelPermalink }}" alt="Pavilion logo" loading="lazy"/>
+      {{ with $logo }}
+        <img src="{{ .RelPermalink }}" alt="Pavilion logo" loading="lazy"/>
+      {{ end }}
     </a>
     <div class="hamburger-toggle">
       <button class='hamburger-button' onclick="toggleNavigation()">
