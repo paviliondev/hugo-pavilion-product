@@ -1,7 +1,7 @@
 .image-list {
   margin: 10rem 0;
 
-  h3 {
+  h2 {
     text-align: center;
   }
 
@@ -27,9 +27,13 @@
     gap: 1rem;
     margin-top: 3rem;
 
+    ul {
+      gap: 1rem;
+      flex-flow: wrap;
+    }
+
     img {
       max-width: 100%;
-      padding: 1em;
     }
   }
 }

@@ -38,36 +38,6 @@
     margin-right: 0.5rem;
   }
 
-  &.btn-solutions {
-    background: var(--clr-solutions-100);
-    color: var(--clr-solutions-500);
-
-    &:hover {
-      background: var(--clr-solutions-500);
-      color: var(--clr-solutions-100);
-    }
-  }
-
-  &.btn-industries {
-    background: var(--clr-industries-100);
-    color: var(--clr-industries-500);
-
-    &:hover {
-      background: var(--clr-industries-500);
-      color: var(--clr-industries-100);
-    }
-  }
-
-  &.btn-membership {
-    background: var(--clr-membership-100);
-    color: var(--clr-membership-500);
-
-    &:hover {
-      background: var(--clr-membership-500);
-      color: var(--clr-membership-100);
-    }
-  }
-
   &:hover {
     transform: none;
   }

@@ -12,6 +12,7 @@
   .testimonial {
     padding: 2em;
     width: 500px;
+    max-width: calc(100vw - 3rem);
     border-radius: 1em;
     background-color: rgba(var(--solutions), .1);
 

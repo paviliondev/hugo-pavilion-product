@@ -11,6 +11,11 @@
     grid-auto-columns: 1fr;
     gap: 1rem;
     margin: 1rem 0 0 0;
+
+    @include for-size('extra-large-down') {
+      grid-auto-flow: unset;
+      grid-auto-columns: unset;
+    }
   }
 
   .box {
@@ -19,6 +24,8 @@
     align-items: center;
     border: 1px solid var(--clr-secondary-400);
     border-radius: 4px;
+    box-shadow: var(--shadow-md);
+    color: var(--primary);
     background-color: rgba(lightgrey, 0.2);
     padding: 1.5rem;
     height: 100%;
@@ -42,6 +49,11 @@
 
   > p {
     max-width: 60%;
+    margin-bottom: 2rem;
+
+    @include for-size('mobile-extra-large-down') {
+      max-width: 100%;
+    }
   }
 
   @include for-size('mobile-extra-large-down') {
@@ -51,7 +63,6 @@
 
     img {
       max-width: 100%;
-      padding: 1em;
     }
   }
 }

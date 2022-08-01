@@ -1,26 +1,29 @@
 .feature-matrix {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+  display: flex;
+  align-items: center;
   box-shadow: var(--shadow-lg);
 
   .feature-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1px;
+    grid-gap: 3em;
+    padding: 3em;
+    flex: 0 1 50%;
 
     .feature-item {
       background-color: white;
-      padding: 2em;
 
       .image {
         display: inline-block;
         padding: .5em;
         background-color: rgba(lightgray, 0.2);
         border-radius: 4px;
+        margin-bottom: 1rem;
 
         img {
-          height: 25px;
+          height: 30px;
+          width: 30px;
+          object-fit: contain;
         }
       }
     }
@@ -31,5 +34,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 0 1 50%;
+  }
+
+  @include for-size('mobile-extra-large-down') {
+    flex-direction: column;
+
+    .feature-list {
+      grid-template-columns: 1fr;
+      order: 2;
+    }
+
+    .feature-description {
+      order: 1;
+    }
   }
 }

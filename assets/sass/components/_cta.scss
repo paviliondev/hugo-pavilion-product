@@ -123,6 +123,12 @@
       @include for-size('mobile-extra-large-down') {
         justify-content: center;
         margin-bottom: 0;
+        flex-flow: wrap;
+
+        li, li a {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }

@@ -12,18 +12,22 @@
             </a>
           {{ end }}
         </div>
-        <div class="feature">
-          <h4>{{ $item.title }}</h4>
-          <p>{{ $item.description }}</p>
-        </div>
+        {{ if $item.description }}
+          <div class="feature">
+            <h4>{{ $item.title }}</h4>
+            <p>{{ $item.description }}</p>
+          </div>
+        {{ end }}
       </div>
     {{end}}
   </div>
-  <div class="feature-description">
-    <h3>{{ .title }}</h3>
-    <p>{{ .description }}</p>
-    {{ with .buttons }}
-      {{ partial "cta-buttons" . }}
-    {{ end }}
-  </div>
+  {{ if .description }}
+    <div class="feature-description">
+      <h2>{{ .title }}</h2>
+      <p>{{ .description }}</p>
+      {{ with .buttons }}
+        {{ partial "cta-buttons" . }}
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
