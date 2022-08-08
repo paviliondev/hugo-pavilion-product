@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 3em;
     padding: 3em;
+    box-sizing: border-box;
     flex: 1 1 auto;
 
     .feature-item {
@@ -23,9 +24,7 @@
         margin-bottom: 1rem;
 
         img {
-          height: 30px;
-          width: 30px;
-          object-fit: contain;
+          max-width: calc(100vw - 4rem);
         }
       }
     }
@@ -41,14 +40,11 @@
 
   @include for-size('mobile-extra-large-down') {
     flex-direction: column;
+    box-shadow: none;
 
     .feature-list {
       grid-template-columns: 1fr;
-      order: 2;
-    }
-
-    .feature-description {
-      order: 1;
+      padding: 1em;
     }
   }
 }
