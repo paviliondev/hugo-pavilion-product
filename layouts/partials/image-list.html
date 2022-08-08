@@ -8,8 +8,8 @@
             {{ if $logo }}
               <img src="{{ $logo.RelPermalink }}" alt="{{ .title }}">
             {{ end }}
-            {{ if .caption }}
-              <label class="caption">{{ .caption }}</label>
+            {{ with .caption }}
+              <label class="caption">{{ . }}</label>
             {{ end }}
           </a>
         </li>
