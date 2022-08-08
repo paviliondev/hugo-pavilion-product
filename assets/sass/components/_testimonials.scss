@@ -10,6 +10,10 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     gap: 2rem;
+
+    @include for-size('mobile-extra-large-down') {
+      grid-template-columns: 1fr;
+    }
   }
 
   .testimonial {

@@ -34,9 +34,10 @@
   @include for-size('mobile-extra-large-down') {
     height: unset;
     margin: 0;
+    gap: unset;
   }
 
-  &-text-content {
+  .cta-text-content {
     max-width: 70%;
 
     @include for-size('mobile-extra-large-down') {
@@ -95,7 +96,7 @@
     }
   }
 
-  &.large &-text-content .title {
+  &.large .cta-text-content .title {
     font-size: 3rem;
     margin-bottom: .25rem;
 
@@ -106,7 +107,7 @@
     }
   }
 
-  &-buttons {
+  .cta-buttons {
     ul {
       margin: 1rem 0 0 0;
       display: flex;
@@ -132,7 +133,7 @@
     }
   }
 
-  &-image-content {
+  .cta-image-content {
 
     img {
       display: none;

@@ -8,11 +8,15 @@
     min-height: unset;
   }
 
-  &-item {
+  .features-items-item {
     padding: 1.5rem;
     border-radius: 1rem;
     transition: background-color 0.25s ease;
     cursor: pointer;
+
+    @include for-size('mobile-extra-large-down') {
+      text-align: center;
+    }
 
     h4 {
       font-size: 1.15rem;
