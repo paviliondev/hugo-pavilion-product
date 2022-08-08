@@ -5,7 +5,24 @@
   </head>
   <body class="container{{ with .Layout }} {{ . }}{{ end }}">
     {{ partial "header.html" . }}
-    <main id="content" class="{{ with .Params.use_case }}usecase {{ . }}{{ end }}">{{ block "main" . }}{{ end }}</main>
+    <main id="content" class="{{ with .Params.use_case }}usecase {{ . }}{{ end }}">
+      {{ if .IsHome }}
+        {{ with .Site.Params.notice }}
+          <div class="site-notice">
+            <div class="site-notice-content">
+              {{ $icon := resources.Get "/images/wizard.svg" }}
+              {{ with $icon }}
+                <span class="site-notice-icon"><img src="{{ .RelPermalink }}"></span>
+              {{ end }}
+              <div class="site-notice-text">
+                <p>{{ safeHTML . }}</p>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+      {{ block "main" . }}{{ end }}
+    </main>
     {{ partial "footer.html" . }}
   </body>
 </html>

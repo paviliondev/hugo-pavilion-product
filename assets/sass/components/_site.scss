@@ -1,0 +1,34 @@
+.site-notice {
+  text-align: center;
+
+  .site-notice-content {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--clr-50);;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+
+    .site-notice-icon {
+      float: left;
+      margin-right: .5rem;
+
+      img {
+        width: 30px;
+        height: 30px;
+        vertical-align: top;
+      }
+    }
+
+
+    .site-notice-text {
+      p {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
