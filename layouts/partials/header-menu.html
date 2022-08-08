@@ -2,7 +2,7 @@
   {{ $currentPage := . }}
   {{ range .Site.Menus.main.Sort.ByWeight}}
     <li class="menu-item {{ .Params.item }} {{ if .HasChildren }} {{ if $currentPage.HasMenuCurrent "main" . }} active {{ end }}menu-dropdown{{ end }}">
-      <a href="{{ .URL }}" class="{{ .Params.link }} link">
+      <a href="{{ .URL }}" class="{{ .Params.link }} link" target='{{ if isset .Params "new_tab" }}_blank{{ else }}_self{{ end }}'>
         <span>{{ .Name }}</span>
       </a>
       {{ if .HasChildren }}
@@ -10,7 +10,7 @@
           {{ range .Children }}
             <li class="menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
               <a href="{{ .URL }}" class="link">
-                <div class="menu-item-image">
+                <div class="menu-item-image" target='{{ if isset .Params "new_tab" }}_blank{{ else }}_self{{ end }}'>
                   {{ with .Params.icon }}
                     <i class="fas fa-{{ . }}"></i>
                   {{ end }}
