@@ -6,7 +6,7 @@
         <span>{{ .Name }}</span>
       </a>
       {{ if .HasChildren }}
-        <ul class="dropdown-panel">
+        <ul class="dropdown-panel {{ .Params.dropdown_class }}">
           {{ range .Children }}
             <li class="menu-item{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
               <a href="{{ .URL }}" class="link">

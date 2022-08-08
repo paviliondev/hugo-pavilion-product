@@ -1,27 +1,25 @@
 <div class="feature-matrix">
   <div class="feature-list">
     {{ range $index, $item := .list }}
-      <div class="feature-item {{ .class }}">
+      <a href="{{ with $item.url }}{{ . }}{{ end }}" target="_blank" class="feature-item {{ .class }}">
         <div class="image">
           {{ with $item.image }}
             {{ $image := resources.Get . }}
-            <a href="{{ with $item.url }}{{ . }}{{ end }}" target="_blank">
-              {{ with $image }}
-                <img alt="feature icon" src="{{ $image.RelPermalink }}" />
-              {{ end }}
-            </a>
+            {{ with $image }}
+              <img alt="feature icon" src="{{ $image.RelPermalink }}" />
+            {{ end }}
           {{ end }}
         </div>
         {{ if $item.description }}
           <div class="feature">
-            <h4>{{ $item.title }}</h4>
+            <h3>{{ $item.title }}</h3>
             <p>{{ $item.description }}</p>
           </div>
         {{ end }}
-      </div>
+      </a>
     {{end}}
   </div>
-  {{ if .description }}
+  {{ if .show_description }}
     <div class="feature-description">
       <h2>{{ .title }}</h2>
       <p>{{ .description }}</p>

@@ -1,0 +1,48 @@
+.features-items {
+  position: relative;
+  margin-top: 3rem;
+  min-height: 650px;
+
+  @include for-size('mobile-extra-large-down') {
+    margin-top: 1rem;
+    min-height: unset;
+  }
+
+  &-item {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: background-color 0.25s ease;
+    cursor: pointer;
+
+    h4 {
+      font-size: 1.15rem;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    @include for-size('large-up') {
+      max-width: 40%;
+
+      &.current {
+        background: var(--clr-primary-50);
+
+        + div {
+          display: block;
+          position: absolute;
+          top: -10%;
+          right: -10%;
+
+          img {
+            width: 700px;
+          }
+        }
+      }
+    }
+  }
+
+  .features-image {
+    display: none;
+  }
+}

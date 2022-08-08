@@ -6,6 +6,7 @@
   justify-content: space-between;
   border-radius: 3rem;
   position: relative;
+  gap: 2rem;
 
   &.margin-top {
     margin-top: 4em;
@@ -32,11 +33,10 @@
 
   @include for-size('mobile-extra-large-down') {
     height: unset;
-    margin: 4rem 0 !important;
+    margin: 0;
   }
 
   &-text-content {
-    padding: 1rem;
     max-width: 70%;
 
     @include for-size('mobile-extra-large-down') {
@@ -84,7 +84,6 @@
     }
 
     @include for-size('tablet-up') {
-      padding: 2rem;
 
       p {
         max-width: 65%;
@@ -92,7 +91,7 @@
     }
 
     @include for-size('mobile-extra-large-down') {
-      padding: 2rem;
+      padding: 0;
     }
   }
 

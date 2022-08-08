@@ -1,0 +1,11 @@
+<div class="card-matrix">
+  {{ range .items }}
+  <div class="card-matrix-item {{ .class }}">
+    {{ $image := resources.Get .image }}
+    <a href="{{ .link }}">
+      <span>{{ .title }}</span>
+      <img src="{{ $image.RelPermalink }}" alt="" />
+    </a>
+  </div>
+  {{ end }}
+</div>

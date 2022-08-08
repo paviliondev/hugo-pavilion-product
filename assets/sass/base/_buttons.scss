@@ -6,6 +6,13 @@
   @include button("primary");
 }
 
+.btn-primary-light {
+  @include button("primary");
+  color: var(--primary);
+  background: var(--clr-primary-100);
+  border: 2px solid var(--clr-primary-300);
+}
+
 .btn-secondary {
   @include button("secondary");
 }
@@ -15,7 +22,6 @@
   background: transparent;
   border: 2px solid var(--clr-primary-300);
   box-shadow: none;
-  padding: 0.35rem 1rem;
 
   &:hover {
     background: var(--clr-primary-300);

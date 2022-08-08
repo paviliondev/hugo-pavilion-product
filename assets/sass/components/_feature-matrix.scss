@@ -8,10 +8,12 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 3em;
     padding: 3em;
-    flex: 0 1 50%;
+    flex: 1 1 auto;
 
     .feature-item {
       background-color: white;
+      color: var(--primary);
+      text-decoration: none;
 
       .image {
         display: inline-block;

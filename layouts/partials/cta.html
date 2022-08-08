@@ -15,8 +15,7 @@
   </div>
   {{ with .image }}
     <div class="cta-image-content">
-      {{ $image_url := or ( . ) "/images/laptop.svg" }}
-      {{ $image := resources.Get $image_url }}
+      {{ $image := resources.Get . }}
       <img src="{{ $image.RelPermalink }}" alt="" />
     </div>
   {{ end }}

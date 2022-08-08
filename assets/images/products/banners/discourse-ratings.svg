@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600px" height="600px" viewBox="0 0 1600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>discourse-ratings</title>
+    <defs>
+        <linearGradient x1="102.594058%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#3C1C8C" stop-opacity="0.05" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="discourse-ratings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="1600" height="600"></rect>
+        <g id="ratings" transform="translate(590.000000, 90.000000)">
+            <path d="M210,16.946636 L266.73696,131.908274 L393.60466,150.34323 L301.80233,239.828385 L323.47392,366.183452 L210,306.526682 L96.5260797,366.183452 L118.19767,239.828385 L26.3953401,150.34323 L153.26304,131.908274 L210,16.946636 Z" id="Star" stroke="#000000" stroke-width="15"></path>
+            <g id="discourse" transform="translate(171.000000, 171.000000)" fill="#3C1C8C" fill-rule="nonzero">
+                <path d="M38.8265624,0 C17.7546875,0 0,16.9296875 0,37.8296875 C0,38.5 0.0171875,77 0.0171875,77 L38.8265624,76.9656249 C59.915625,76.9656249 77,59.3828125 77,38.4828126 C77,17.5828125 59.915625,0 38.8265624,0 Z M39.2463124,63.4 C35.3420626,63.4 31.6189374,62.5346247 28.2983125,60.9648748 L11.9769375,65.01 L16.5855625,49.9162498 C14.6133125,46.2736251 13.4863125,42.0876249 13.4863125,37.6399999 C13.4863125,23.411625 25.0179375,11.88 39.2463124,11.88 C53.4746874,11.88 65.0063124,23.411625 65.0063124,37.6399999 C65.0063124,51.8683749 53.4746874,63.4 39.2463124,63.4 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

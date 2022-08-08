@@ -1,10 +1,9 @@
 <div class="testimonials">
-  <h2 class="title">{{ .title }}</h2>
   <ul>
     {{ range $index, $item := .list }}
       <li class="testimonial">
         <div class="content">
-          {{ $quote := resources.Get "/images/clients/quote.svg" }}
+          {{ $quote := resources.Get "/images/quote.svg" }}
           {{ with $quote }}
             <img class="quote left" src="{{ .RelPermalink }}" />
           {{ end }}

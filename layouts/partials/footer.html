@@ -1,10 +1,10 @@
 <footer>
   <div class="footer-upper">
     <div class="footer-upper-left">
-      <img src="/images/pavilion/logo.svg" alt="Pavilion Logo" width="130" loading="lazy" />
+      {{ $logo := resources.Get "/images/logo.svg" }}
+      <img src="{{ $logo.RelPermalink }}" alt="Pavilion Logo" width="130" />
       <p>
-        Pavilion is a coöperative that builds software and provides services for
-        online communities.
+        We Build Communities.
       </p>
       <ul>
         <li><a href="https://pavilion.tech"><i class="fab fa-discourse"></i></i></a></li>
@@ -13,14 +13,6 @@
       </ul>
     </div>
     <div class="footer-upper-right">
-      <ul>
-        <li><h3>Custom Wizard</h3></li>
-        <li><a href="/pricing">Pricing</a></li>
-        <li><a href="/use-cases/clubs">Clubs & Associations</a></li>
-        <li><a href="/use-cases/developers">Developer Communities</a></li>
-        <li><a href="/use-cases/education">Education Communities</a></li>
-        <li><a href="/use-cases/professional">Professional Communities</a></li>
-      </ul>
       <ul>
         <li>
           <h3>Company</h3>

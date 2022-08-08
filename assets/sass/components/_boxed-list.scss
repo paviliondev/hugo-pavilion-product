@@ -1,8 +1,7 @@
 .boxed-list {
-  margin: 10rem 0;
-
   img {
     width: 40px;
+    height: 40px;
   }
 
   ul {
@@ -48,7 +47,6 @@
   }
 
   > p {
-    max-width: 60%;
     margin-bottom: 2rem;
 
     @include for-size('mobile-extra-large-down') {

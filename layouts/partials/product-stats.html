@@ -1,0 +1,15 @@
+<div class="product-stats">
+  {{ range .stats }}
+  <div class="product-stats-item">
+    <h5>{{ .number }}</h5>
+    <p>{{ .description }}</p>
+    <small>{{ .note }}</small>
+  </div>
+  {{ end }}
+</div>
+{{ $image := resources.Get .image }}
+{{ with $image }}
+  <div class="product-stats-image">
+    <img alt="a mockup of a product" src="{{ .RelPermalink }}" />
+  </div>
+{{ end }}

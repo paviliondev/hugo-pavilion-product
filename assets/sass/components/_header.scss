@@ -16,7 +16,6 @@
 
   .site-logo {
     display: flex;
-    padding: 1rem 0;
 
     a {
       display: flex;
@@ -24,7 +23,7 @@
     }
 
     img {
-      height: 60px;
+      height: 40px;
       max-width: 400px;
     }
   }
@@ -124,10 +123,7 @@
 
     .dropdown-panel {
       display: none;
-      grid-template-rows: repeat(auto-fit, minmax(87px, 1fr));
-      grid-template-columns: auto auto;
       grid-gap: 2rem;
-      max-height: 600px;
       position: absolute;
       top: 3.5rem;
       left: 50%;
@@ -138,6 +134,10 @@
       box-shadow: 0px 1px 10px -3px rgba(0, 0, 0, 0.25);
       border-radius: 15px;
       transition: all ease 0.28s;
+
+      &.two-columns {
+        grid-template-columns: auto auto;
+      }
 
       @include for-size('mobile-extra-large-down') {
         display: block;
@@ -163,7 +163,7 @@
         flex: 1 1 100%;
 
         .menu-item-image {
-          margin-right: 1rem;
+          margin-right: 1.5rem;
           display: inline-block;
         }
 
@@ -226,7 +226,6 @@
 
 .site-header.scrolling-header {
   background: var(--clr-gray-100);
-  padding: 0 2rem;
   box-shadow: 0px -2px 10px 1px rgba(0, 0, 0, 0.25);
 
   .site-navigation.expanded-navigation {

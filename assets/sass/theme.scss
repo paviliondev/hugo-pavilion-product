@@ -7,14 +7,18 @@
 @import 'base/base';
 @import 'base/normalize';
 @import 'base/typography';
+@import 'base/buttons';
 
 // Component Imports
 @import 'components/header';
 @import 'components/footer';
-@import 'components/buttons';
 @import 'components/cta';
 @import 'components/boxed-list';
+@import 'components/product-list';
 @import 'components/image-list';
 @import 'components/feature-matrix';
 @import 'components/testimonials';
 @import 'components/info-modal';
+@import 'components/features';
+@import 'components/card-matrix';
+@import 'components/product-stats';
