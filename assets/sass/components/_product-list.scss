@@ -57,6 +57,7 @@ $topics: "events", "design", "locations", "identity", "forms", "ratings";
 
   .product {
     flex: 0 1 calc(50% - 2rem);
+    max-width: calc(100vw - 3rem);
     border: 1px solid var(--clr-secondary-400);
     border-radius: 4px;
     box-shadow: var(--shadow-md);
@@ -91,6 +92,7 @@ $topics: "events", "design", "locations", "identity", "forms", "ratings";
 
     .tags {
       display: flex;
+      flex-flow: wrap;
       gap: 1rem;
       margin-bottom: 1rem;
 
@@ -142,9 +144,5 @@ $topics: "events", "design", "locations", "identity", "forms", "ratings";
     flex-direction: column;
     gap: 1rem;
     margin-top: 3rem;
-
-    img {
-      max-width: 100%;
-    }
   }
 }

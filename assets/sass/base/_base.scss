@@ -18,6 +18,10 @@ main#content {
   @include for-size('medium-up') {
     padding-bottom: 350px;
   }
+
+  @include for-size('medium-down') {
+    padding-bottom: 1.5rem;
+  }
 }
 
 footer {
