@@ -1,0 +1,18 @@
+.quote-container {
+  position: relative;
+}
+
+.quote {
+  position: absolute;
+
+  &.left {
+    top: -50px;
+    left: -30px;
+  }
+
+  &.right {
+    transform: rotateX(180deg) rotateY(180deg);
+    right: -30px;
+    bottom: -50px;
+  }
+}

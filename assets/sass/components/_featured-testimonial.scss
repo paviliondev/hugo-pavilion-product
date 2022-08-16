@@ -1,0 +1,55 @@
+.featured-testimonial {
+  padding: 6em 6em 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+
+  @include for-size('mobile-extra-large-down') {
+    padding: 0;
+  }
+
+  .review {
+    padding: 1em 5em;
+
+    @include for-size('mobile-extra-large-down') {
+      padding: 0;
+    }
+
+    p {
+      position: relative;
+      padding: 0 40px;
+      margin-top: -40px;
+
+      @include for-size('mobile-extra-large-down') {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .client {
+    display: flex;
+    width: 100%;
+    padding: 0 8rem;
+
+    @include for-size('mobile-extra-large-down') {
+      padding: 2rem  .25rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .details {
+
+      .name {
+        font-weight: 700;
+      }
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+}

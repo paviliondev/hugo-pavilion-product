@@ -1,0 +1,31 @@
+<div class="featured-testimonial">
+  <div class="review">
+    <div class="review-box quote-container">
+      {{ $quote := resources.Get "/images/quote.svg" }}
+      {{ with $quote }}
+        <img class="quote left" src="{{ .RelPermalink }}" />
+      {{ end }}
+      <p>{{ .content }}</p>
+      {{ with $quote }}
+        <img class="quote right" src="{{ .RelPermalink }}" />
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="client">
+    {{ with .avatar }}
+      {{ $avatar := resources.Get . }}
+      {{ with $avatar }}
+        <div class="avatar large">
+          <img src="{{ .RelPermalink }}" />
+        </div>
+      {{ end }}
+    {{ end }}
+    <div class="details">
+      <div class="name">{{ .name }}</div>
+      {{ with .description }}
+        <div class="description">{{ safeHTML . }}</div>
+      {{ end }}
+    </div>
+  </div>
+</div>

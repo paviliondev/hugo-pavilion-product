@@ -8,6 +8,8 @@
 @import 'base/normalize';
 @import 'base/typography';
 @import 'base/buttons';
+@import 'base/quote';
+@import 'base/avatar';
 
 // Component Imports
 @import 'components/header';
@@ -19,6 +21,7 @@
 @import 'components/image-list';
 @import 'components/feature-matrix';
 @import 'components/testimonials';
+@import 'components/featured-testimonial';
 @import 'components/info-modal';
 @import 'components/features';
 @import 'components/card-matrix';

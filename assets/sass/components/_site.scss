@@ -1,6 +1,10 @@
 .site-notice {
   text-align: center;
 
+  @include for-size('mobile-extra-large-down') {
+    text-align: unset;
+  }
+
   .site-notice-content {
     padding: 1rem 2rem;
     border-radius: 1rem;
@@ -8,6 +12,11 @@
     display: inline-flex;
     align-items: center;
     font-size: 1.2rem;
+
+    @include for-size('mobile-extra-large-down') {
+      align-items: flex-start;
+      padding: 1rem;
+    }
 
     .site-notice-icon {
       float: left;
