@@ -3,11 +3,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+{{ with .Site.Params.description }}
+  <meta name="description" content="{{ . }}">
+{{ end }}
+{{ with .Site.Params.image }}
+  {{ $image := resources.Get . }}
+  <meta property="og:image" content="{{ $image.Permalink }}" />
+{{ end }}
+<title>{{ .Site.Title }} - {{ .Title }}</title>
+
 <!-- Font Awesome -->
-<script
-  src="https://kit.fontawesome.com/073d680014.js"
-  crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/073d680014.js" crossorigin="anonymous"></script>
 
 <!-- Main Font -->
 <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet" />
@@ -24,5 +30,3 @@
 <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
 
 {{ partial "partials/head-includes" }}
-
-<title>{{ .Site.Title }} - {{ .Title }}</title>
