@@ -51,15 +51,8 @@
       margin-bottom: .5em;
     }
 
-    a {
-      color: $clr-50;
-      border-bottom: 2px solid $clr-50;
-      transition: padding 0.25s ease;
-
-      &:hover {
-        text-decoration: none;
-        padding-bottom: 3px;
-      }
+    .description a {
+      color: $clr-300;
     }
 
     a.btn-primary,
@@ -148,5 +141,16 @@
         max-width: 35rem;
       }
     }
+  }
+}
+
+.cta-bottom {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .cta,
+  .cta-buttons ul {
+    justify-content: center;
   }
 }

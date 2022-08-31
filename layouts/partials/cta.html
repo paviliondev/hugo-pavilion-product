@@ -7,7 +7,7 @@
       <div class="title">{{ . }}</div>
     {{ end }}
     {{ with .description }}
-      <div class="description">{{ . }}</div>
+      <div class="description">{{ safeHTML . }}</div>
     {{ end }}
     {{ if isset . "primary" }}
       {{ partial "cta-buttons" . }}
