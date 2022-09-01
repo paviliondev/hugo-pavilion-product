@@ -31,7 +31,7 @@
   .hamburger-toggle {
     margin-left: auto;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
     @include for-size('medium-up') {
       display: none;
