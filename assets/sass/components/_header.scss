@@ -29,14 +29,16 @@
   }
 
   .hamburger-toggle {
-    display: inline;
     margin-left: auto;
+    display: flex;
+    align-items: flex-end;
 
     @include for-size('medium-up') {
       display: none;
     }
 
     .hamburger-button {
+      display: flex;
       font-size: 2rem;
       border: none;
       outline: none;
