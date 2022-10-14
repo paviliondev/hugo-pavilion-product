@@ -10,7 +10,7 @@
         {{ with .Site.Params.notice }}
           <div class="site-notice">
             <div class="site-notice-content">
-              {{ $icon := resources.Get "/images/wizard.svg" }}
+              {{ $icon := resources.Get $.Site.Params.notice_icon }}
               {{ with $icon }}
                 <span class="site-notice-icon"><img src="{{ .RelPermalink }}"></span>
               {{ end }}
