@@ -8,8 +8,15 @@
   {{ end }}
 </div>
 {{ $image := resources.Get .image }}
-{{ with $image }}
+
+{{ if $image }}
   <div class="product-stats-image">
-    <img alt="a mockup of a product" src="{{ .RelPermalink }}" />
+    {{ if .url }}
+      <a href="{{ .url }}" target="_blank">
+        <img alt="product image" src="{{ $image.RelPermalink }}" />
+      </a>
+    {{ else }}
+      <img alt="product image" src="{{ $image.RelPermalink }}" />
+    {{ end }}
   </div>
 {{ end }}
